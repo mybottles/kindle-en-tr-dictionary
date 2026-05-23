@@ -1,8 +1,13 @@
 # Kindle için İngilizce → Türkçe Sözlük
 
-> _**English version:** [README.en.md](README.en.md)_
+**Kindle'da İngilizce kitap okurken kelimeye uzun basınca Türkçe karşılığı çıksın.**
 
-Kindle Paperwhite üzerinde **İngilizce bir kitap okurken bir kelimeye uzun basınca Türkçe karşılığını ekrana getiren** bir popup sözlük.
+[![GitHub stars](https://img.shields.io/github/stars/mybottles/kindle-en-tr-dictionary?style=social)](https://github.com/mybottles/kindle-en-tr-dictionary/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/mybottles/kindle-en-tr-dictionary?style=social)](https://github.com/mybottles/kindle-en-tr-dictionary/network/members)
+[![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](https://www.gnu.org/licenses/gpl-2.0)
+[![Kindle](https://img.shields.io/badge/Kindle-Paperwhite%2012-orange)](https://github.com/mybottles/kindle-en-tr-dictionary)
+
+> _**English version:** [README.en.md](README.en.md)_
 
 **41.424 kelime · 152.097 çeviri · 45.675 çekim formu** &nbsp;·&nbsp; CC BY-SA + GPL kaynaklarından derlendi.
 

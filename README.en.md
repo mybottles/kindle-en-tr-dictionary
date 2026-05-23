@@ -1,8 +1,13 @@
 # Kindle English → Turkish Dictionary
 
-> _**Türkçe sürüm:** [README.md](README.md)_
+**Long-press any English word in your Kindle book and see its Turkish translation.**
 
-A popup dictionary for Kindle Paperwhite that **shows the Turkish translation when you long-press an English word** while reading.
+[![GitHub stars](https://img.shields.io/github/stars/mybottles/kindle-en-tr-dictionary?style=social)](https://github.com/mybottles/kindle-en-tr-dictionary/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/mybottles/kindle-en-tr-dictionary?style=social)](https://github.com/mybottles/kindle-en-tr-dictionary/network/members)
+[![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](https://www.gnu.org/licenses/gpl-2.0)
+[![Kindle](https://img.shields.io/badge/Kindle-Paperwhite%2012-orange)](https://github.com/mybottles/kindle-en-tr-dictionary)
+
+> _**Türkçe sürüm:** [README.md](README.md)_
 
 **41,424 headwords · 152,097 translations · 45,675 inflected forms** &nbsp;·&nbsp; built from CC BY-SA + GPL open sources.
 
