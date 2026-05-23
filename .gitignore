@@ -1,0 +1,31 @@
+# --- Large source data (rebuild from upstream) ---
+kaikki-en.jsonl
+freedict-eng-tur.tab
+freedict.tar.xz
+freedict/
+
+# --- Third-party binaries (download per-platform, not redistributable) ---
+kindlegen
+kindling
+
+# --- Intermediate build artifacts ---
+dict-src/
+*.mobi.bak
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# --- macOS / editor cruft ---
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# --- Build temp files from kindlegen ---
+mbt-*
