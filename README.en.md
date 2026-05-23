@@ -150,7 +150,7 @@ Full technical notes: [`CLAUDE.md`](CLAUDE.md).
 
 - **Single-word lookups only**: the Kindle popup can only select a single token. Multi-word phrases like "in spite of" aren't covered (Kindle infrastructure restriction).
 - **Wiktionary gaps**: some technical or modern terms don't have Turkish translations in Wiktionary (e.g. `mitochondria` is captured as the plural inflection of headword `mitochondrion`).
-- **Limited context**: translations are mostly single-word equivalents. For complex idioms, a separate reference is needed.
+- **Single-word equivalents**: each entry gives concise translations. For idioms and multi-word expressions, a companion reference (e.g. a phone app) can be useful.
 - **Wiktionary's inconsistent quality**: some translations are dialectal or archaic (`lügat`, `ışılbireşim`). Common usages appear first.
 
 ---

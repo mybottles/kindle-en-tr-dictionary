@@ -150,7 +150,7 @@ Detaylı teknik notlar için: [`CLAUDE.md`](CLAUDE.md).
 
 - **Tek kelime arama**: Kindle popup'ı sadece tek kelime seçer. "in spite of" gibi çoklu ifadeler bu sözlükte yok (zaten Kindle altyapısı izin vermiyor).
 - **Wiktionary boşlukları**: Bazı teknik/güncel kelimeler Wiktionary'de Türkçe karşılıksız (örn. `mitochondria` çekim formu olarak alınır → headword `mitochondrion`).
-- **Bağlam yok**: Çeviriler genellikle tek kelime. Karmaşık deyimler için ek bir sözlüğe ihtiyaç olur.
+- **Tek kelime karşılığı**: Sözlük her kelime için kısa karşılıklar verir. Deyimler ve çoklu kelimeli ifadeler için ek bir kaynak (örn. telefon uygulaması) faydalı olabilir.
 - **Wiktionary'nin tutarsız kalitesi**: Bazı çeviriler dialect/argo (örn. "lügat", "ışılbireşim"). Kullanışlı çoğu giriş ilk sırada.
 
 ---
