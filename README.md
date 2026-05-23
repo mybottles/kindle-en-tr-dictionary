@@ -174,6 +174,26 @@ Açık veriden açık çıktıya — Kindle'da Türkçe kitap okumak isteyenlere
 
 ---
 
+## Paylaşın 🙏
+
+Bu sözlüğü yıllarca aradım, bulamadım. Sen de buldun ve işe yaradıysa, **lütfen başkalarına ulaşmasına yardım et**. Türkiye'de Kindle kullanan binlerce kişi aynı sorunu yaşıyor ve çözümü bilmiyor.
+
+Tek bir paylaşım bile büyük fark yaratır:
+
+- **Reddit**: [r/kindle](https://www.reddit.com/r/kindle/), [r/Turkey](https://www.reddit.com/r/Turkey/), [r/turkishlearning](https://www.reddit.com/r/turkishlearning/)
+- **Ekşi Sözlük**: "kindle türkçe sözlük" başlığı altında veya yeni başlık açarak
+- **Twitter/X**: `#Kindle`, `#KindlePaperwhite`, `#ÇeviriSözlük` etiketleriyle
+- **Donanım Haber forumu**: E-kitap okuyucular bölümü
+- **Goodreads grupları**: Türkçe okuyucu kulüpleri
+- **WhatsApp / Telegram**: Kitap kulüpleri, dil öğrenme grupları
+- **Üniversite Discord / forumları**: Akademik İngilizce kitap okuyan öğrenciler
+
+Star ⭐ vermek de yardımcı olur — repo daha çok kişinin radarına girer.
+
+> "Aradım, yoktu. Sen ararken bulasın diye buradayım."
+
+---
+
 ## Lisans
 
 - **Build kodu** (`build.py`): MIT — bkz. [`LICENSE`](LICENSE)

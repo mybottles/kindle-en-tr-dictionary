@@ -174,6 +174,25 @@ From open data to open output — dedicated to everyone who wants to read Englis
 
 ---
 
+## Spread the word 🙏
+
+I spent years looking for a working English-to-Turkish Kindle dictionary and never found one. If this helps you, **please help others find it too**. There are thousands of Turkish-speaking Kindle readers stuck on the same problem who don't know there's a fix.
+
+A single share genuinely moves the needle:
+
+- **Reddit**: [r/kindle](https://www.reddit.com/r/kindle/), [r/turkishlearning](https://www.reddit.com/r/turkishlearning/), [r/languagelearning](https://www.reddit.com/r/languagelearning/)
+- **Hacker News**: as a "Show HN" if you find the build process interesting
+- **Lobste.rs**: under the `practices` or `linguistics` tags
+- **Twitter/X**: `#Kindle`, `#KindlePaperwhite`, `#languagelearning`
+- **MobileRead forums**: the Kindle Dictionaries subforum is where Kindle tinkerers live
+- **Language-learning Discord servers and Telegram groups**
+
+A star ⭐ also helps — it surfaces the repo to more people searching GitHub.
+
+> "I looked, and it didn't exist. I'm here so the next person looking finds it."
+
+---
+
 ## License
 
 - **Build code** (`build.py`): MIT — see [`LICENSE`](LICENSE)
