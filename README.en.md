@@ -28,7 +28,7 @@ A gift to everyone who needs it.
 
 1. Download **`english-turkish-dictionary.mobi`** from the [Releases](../../releases/latest) page
 2. Connect Kindle via USB, copy the file into `documents/` (or send via Send-to-Kindle)
-3. On Kindle: **Settings → Language & Dictionaries → Dictionaries → English →** select *English-Turkish Dictionary (Wiktionary)*
+3. On Kindle: **Settings → Language & Dictionaries → Dictionaries → English →** select *English-Turkish (muratuysal.com)*
 4. Open any English book, long-press a word, see the Turkish translation in the popup.
 
 > "ran" → resolves to "run"; "running" → "run"; "mice" → "mouse"; "better" → "good".
@@ -99,7 +99,7 @@ You can grab the prebuilt MOBI from Releases — but if you want to rebuild:
 ### Steps
 
 ```bash
-git clone https://github.com/MuratUysal/kindle-en-tr-dictionary
+git clone https://github.com/mybottles/kindle-en-tr-dictionary
 cd kindle-en-tr-dictionary
 
 # Python environment

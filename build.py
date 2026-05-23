@@ -420,7 +420,7 @@ COPYRIGHT_HTML = """<?xml version="1.0" encoding="utf-8"?>
    from FreeDict. CC BY-SA 4.0 is one-way compatible with GPLv3, so the merged
    artifact carries the more restrictive GPL terms.</p>
 <p>Source code &amp; rebuild instructions:
-   <a href="https://github.com/MuratUysal/kindle-en-tr-dictionary">github.com/MuratUysal/kindle-en-tr-dictionary</a></p>
+   <a href="https://github.com/mybottles/kindle-en-tr-dictionary">github.com/mybottles/kindle-en-tr-dictionary</a></p>
 </body></html>
 """
 
@@ -518,7 +518,7 @@ def write_opf(content_files: list[str]):
     <dc:contributor opf:role="bkp">Murat Uysal (https://muratuysal.com)</dc:contributor>
     <dc:publisher>Murat Uysal — muratuysal.com</dc:publisher>
     <dc:description>English → Turkish popup dictionary for Kindle. 41,424 headwords with 45,675 inflected forms. Compiled by Murat Uysal from English Wiktionary and FreeDict eng-tur. https://muratuysal.com</dc:description>
-    <dc:source>https://github.com/MuratUysal/kindle-en-tr-dictionary</dc:source>
+    <dc:source>https://github.com/mybottles/kindle-en-tr-dictionary</dc:source>
     <dc:language>en</dc:language>
     <dc:identifier id="BookId" opf:scheme="UUID">{book_uuid}</dc:identifier>
     <dc:rights>Build code: MIT (c) Murat Uysal. Content: GPL v2.0+ (inherited from FreeDict eng-tur).</dc:rights>

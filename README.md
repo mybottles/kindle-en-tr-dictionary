@@ -28,7 +28,7 @@ Bu boşluğu doldurmak için yaptım. Açık kaynak, açık veri, açık lisans.
 
 1. [Releases](../../releases/latest) sayfasından **`english-turkish-dictionary.mobi`** dosyasını indir
 2. Kindle'ı USB ile bilgisayara bağla, `documents/` klasörüne kopyala (veya Send-to-Kindle uygulamasıyla gönder)
-3. Kindle'da: **Settings → Language & Dictionaries → Dictionaries → English →** *English-Turkish Dictionary (Wiktionary)* seç
+3. Kindle'da: **Settings → Language & Dictionaries → Dictionaries → English →** *English-Turkish (muratuysal.com)* seç
 4. İngilizce bir kitap aç. Bir kelimeye uzun bas. Türkçe karşılığı popup'ta görünecek.
 
 > "ran" → "run" girdisi; "running" → "run"; "mice" → "mouse"; "better" → "good".
@@ -99,7 +99,7 @@ Releases'tan indirebilirsin — ama kendin derlemek istersen:
 ### Adımlar
 
 ```bash
-git clone https://github.com/MuratUysal/kindle-en-tr-dictionary
+git clone https://github.com/mybottles/kindle-en-tr-dictionary
 cd kindle-en-tr-dictionary
 
 # Python ortamı
