@@ -45,6 +45,7 @@ Bu boşluğu doldurmak için yaptım. Açık kaynak, açık veri, açık lisans.
 | **Çekim formu** (`<idx:infl>`) | 45.675 |
 | **Dosya boyutu** | 5.5 MB |
 | **Kaynak** | English Wiktionary + FreeDict eng-tur |
+| **Popup başlığı** | English-Turkish (muratuysal.com) |
 
 ### Kapsam örneği
 
@@ -98,8 +99,8 @@ Releases'tan indirebilirsin — ama kendin derlemek istersen:
 ### Adımlar
 
 ```bash
-git clone https://github.com/<your-user>/kindle-eng-tur
-cd kindle-eng-tur
+git clone https://github.com/MuratUysal/kindle-en-tr-dictionary
+cd kindle-en-tr-dictionary
 
 # Python ortamı
 python3 -m venv .venv

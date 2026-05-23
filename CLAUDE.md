@@ -8,6 +8,9 @@ A Kindle popup dictionary that translates English → Turkish. The user reads sc
 
 Output artifact: `english-turkish-dictionary.mobi`. Drop it on a Kindle, set as default English dictionary, done.
 
+Repo: `github.com/MuratUysal/kindle-en-tr-dictionary` (developer: Murat Uysal, muratuysal.com).
+Dictionary popup label: `English-Turkish (muratuysal.com)` — this is what shows under each popup; set in `<dc:title>` and propagates to EXTH 503 + MOBI full_name.
+
 ## Architecture
 
 ```
@@ -115,6 +118,9 @@ This is reflected in `LICENSE` and both READMEs.
 ### Rebuilding from scratch
 
 ```bash
+git clone https://github.com/MuratUysal/kindle-en-tr-dictionary
+cd kindle-en-tr-dictionary
+
 # 1. Get source data (not in repo - too large, regenerable)
 curl -L -o kaikki-en.jsonl \
   https://kaikki.org/dictionary/English/kaikki.org-dictionary-English.jsonl

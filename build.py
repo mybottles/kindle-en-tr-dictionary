@@ -377,11 +377,12 @@ def write_html(book: dict, chunk_max: int = 6000) -> list[str]:
 
 COVER_HTML = """<?xml version="1.0" encoding="utf-8"?>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>English-Turkish Dictionary</title></head>
+<title>English-Turkish (muratuysal.com)</title></head>
 <body>
-<h1>English &#x2192; Turkish Dictionary</h1>
-<p>Source: English Wiktionary translations (via kaikki.org Wiktextract).</p>
-<p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&#xA0;BY-SA&#xA0;4.0</a>.</p>
+<h1>English &#x2192; Turkish</h1>
+<p>Compiled by Murat Uysal &#x00B7; <a href="https://muratuysal.com">muratuysal.com</a></p>
+<p>Source data: English Wiktionary (via kaikki.org Wiktextract) and FreeDict eng-tur v0.3.</p>
+<p>Build code MIT-licensed; dictionary content GPL v2.0+ (inherited from FreeDict).</p>
 </body></html>
 """
 
@@ -398,8 +399,13 @@ Long-press any English word; Turkish translation appears in the popup.</p>
 COPYRIGHT_HTML = """<?xml version="1.0" encoding="utf-8"?>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/></head>
 <body>
-<h2>Copyright</h2>
-<p>This dictionary combines two open-licensed sources:</p>
+<h2>Credits &amp; Copyright</h2>
+<p><b>Compiled by:</b> Murat Uysal &#x00B7; <a href="https://muratuysal.com">muratuysal.com</a></p>
+<p>This dictionary was hand-assembled to fill a real gap: there was no working,
+   open, free English-to-Turkish Kindle dictionary. It is dedicated to every
+   Turkish reader who wants to enjoy English books on a Kindle with one-tap
+   translations.</p>
+<p>Data sources:</p>
 <ul>
   <li><b>English Wiktionary</b> translations, extracted via kaikki.org Wiktextract
       (May 2026 dump). Available under
@@ -409,10 +415,47 @@ COPYRIGHT_HTML = """<?xml version="1.0" encoding="utf-8"?>
       Available under the
       <a href="https://www.gnu.org/licenses/gpl-2.0.html">GNU GPL v2.0 or later</a>.</li>
 </ul>
-<p>The combined work is distributed under the GPL v2 or later, which is compatible
-   with both upstream licenses (CC BY-SA 4.0 is one-way compatible with GPLv3).</p>
+<p><b>Licensing:</b> Build code is MIT (&#x00A9; Murat Uysal). The combined
+   dictionary content is distributed under the GNU GPL v2.0 or later, inherited
+   from FreeDict. CC BY-SA 4.0 is one-way compatible with GPLv3, so the merged
+   artifact carries the more restrictive GPL terms.</p>
+<p>Source code &amp; rebuild instructions:
+   <a href="https://github.com/MuratUysal/kindle-en-tr-dictionary">github.com/MuratUysal/kindle-en-tr-dictionary</a></p>
 </body></html>
 """
+
+
+def _write_cover_jpg(path: Path) -> None:
+    """Render a simple 1600x2560 JPEG cover with title + attribution.
+
+    Falls back to leaving an existing cover.jpg untouched if Pillow is missing.
+    """
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        if path.exists():
+            return
+        raise RuntimeError("Pillow not installed; cannot generate cover.jpg") from None
+
+    img = Image.new("RGB", (1600, 2560), (40, 60, 90))
+    d = ImageDraw.Draw(img)
+    try:
+        font_big = ImageFont.truetype(
+            "/System/Library/Fonts/Supplemental/Times New Roman Bold.ttf", 140)
+        font_med = ImageFont.truetype(
+            "/System/Library/Fonts/Supplemental/Times New Roman.ttf", 80)
+        font_small = ImageFont.truetype(
+            "/System/Library/Fonts/Supplemental/Times New Roman.ttf", 60)
+    except Exception:
+        font_big = ImageFont.load_default()
+        font_med = ImageFont.load_default()
+        font_small = ImageFont.load_default()
+    d.text((100, 900),  "English",      fill="white",   font=font_big)
+    d.text((100, 1080), "→ Türkçe",  fill="white",   font=font_big)
+    d.text((100, 1260), "Dictionary",   fill="white",   font=font_big)
+    d.text((100, 1500), "Murat Uysal",  fill="#cccccc", font=font_med)
+    d.text((100, 1610), "muratuysal.com", fill="#aaaaaa", font=font_small)
+    img.save(path, quality=85)
 
 
 NCX_TEMPLATE = """<?xml version="1.0" encoding="utf-8"?>
@@ -423,7 +466,7 @@ NCX_TEMPLATE = """<?xml version="1.0" encoding="utf-8"?>
     <meta name="dtb:totalPageCount" content="0"/>
     <meta name="dtb:maxPageNumber" content="0"/>
   </head>
-  <docTitle><text>English-Turkish Dictionary</text></docTitle>
+  <docTitle><text>English-Turkish (muratuysal.com)</text></docTitle>
   <navMap>
     <navPoint id="nav-cover" playOrder="1"><navLabel><text>Cover</text></navLabel><content src="cover.html"/></navPoint>
     <navPoint id="nav-usage" playOrder="2"><navLabel><text>Usage</text></navLabel><content src="usage.html"/></navPoint>
@@ -468,11 +511,17 @@ def write_opf(content_files: list[str]):
          unique-identifier="BookId">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:opf="http://www.idpf.org/2007/opf">
-    <dc:title>English-Turkish Dictionary (Wiktionary)</dc:title>
+    <dc:title>English-Turkish (muratuysal.com)</dc:title>
+    <dc:creator opf:role="edt" opf:file-as="Uysal, Murat">Murat Uysal</dc:creator>
     <dc:creator opf:role="aut">Wiktionary contributors</dc:creator>
+    <dc:creator opf:role="aut">FreeDict eng-tur contributors</dc:creator>
+    <dc:contributor opf:role="bkp">Murat Uysal (https://muratuysal.com)</dc:contributor>
+    <dc:publisher>Murat Uysal — muratuysal.com</dc:publisher>
+    <dc:description>English → Turkish popup dictionary for Kindle. 41,424 headwords with 45,675 inflected forms. Compiled by Murat Uysal from English Wiktionary and FreeDict eng-tur. https://muratuysal.com</dc:description>
+    <dc:source>https://github.com/MuratUysal/kindle-en-tr-dictionary</dc:source>
     <dc:language>en</dc:language>
     <dc:identifier id="BookId" opf:scheme="UUID">{book_uuid}</dc:identifier>
-    <dc:rights>CC BY-SA 4.0</dc:rights>
+    <dc:rights>Build code: MIT (c) Murat Uysal. Content: GPL v2.0+ (inherited from FreeDict eng-tur).</dc:rights>
     <meta name="cover" content="cover-img"/>
     <x-metadata>
       <DictionaryInLanguage>en</DictionaryInLanguage>
@@ -495,6 +544,7 @@ def write_opf(content_files: list[str]):
     (OUT_DIR / "dict.opf").write_text(opf, encoding="utf-8")
     (OUT_DIR / "cover.html").write_text(COVER_HTML, encoding="utf-8")
     (OUT_DIR / "usage.html").write_text(USAGE_HTML, encoding="utf-8")
+    _write_cover_jpg(OUT_DIR / "cover.jpg")
     (OUT_DIR / "copyright.html").write_text(COPYRIGHT_HTML, encoding="utf-8")
     (OUT_DIR / "toc.ncx").write_text(
         NCX_TEMPLATE.format(uuid=book_uuid, content_nav="\n".join(nav_lines)),

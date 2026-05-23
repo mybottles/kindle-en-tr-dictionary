@@ -45,6 +45,7 @@ A gift to everyone who needs it.
 | **Inflected forms** (`<idx:infl>`) | 45,675 |
 | **File size** | 5.5 MB |
 | **Sources** | English Wiktionary + FreeDict eng-tur |
+| **Popup label** | English-Turkish (muratuysal.com) |
 
 ### Coverage sample
 
@@ -98,8 +99,8 @@ You can grab the prebuilt MOBI from Releases — but if you want to rebuild:
 ### Steps
 
 ```bash
-git clone https://github.com/<your-user>/kindle-eng-tur
-cd kindle-eng-tur
+git clone https://github.com/MuratUysal/kindle-en-tr-dictionary
+cd kindle-en-tr-dictionary
 
 # Python environment
 python3 -m venv .venv
